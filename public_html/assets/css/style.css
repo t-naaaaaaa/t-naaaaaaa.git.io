@@ -76,7 +76,7 @@ a {
   position: relative;
 }
 @media screen and (max-width: 768px) {
-  .header-logo{
+  .header-logo {
     margin-left: 0;
   }
 }
@@ -100,23 +100,13 @@ a {
   padding-right: 24px;
   position: absolute;
   right: 0;
-  left: 0;
   top: 0;
-  width: 100%;
+  width: 200px;
   transform: translateX(100%);
   background-color: #fff; /*ハンバーガーメニュークリック時のナビゲーションメニュー背景色*/
   transition: ease 0.4s; /*ハンバーガーメニュークリック時のナビゲーションメニュー出現を遅延*/
 }
-/* ハンバーガーメニュー */
 
-.hamburger {
-  width: 48px;
-  height: 100%;
-  display: none;
-  background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
-  border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
-  z-index: 9999;
-}
 .header a {
   color: #000;
   text-decoration: none;
@@ -130,15 +120,29 @@ a {
 .header__title {
   width: 80px;
 }
+
+.header-contact {
+  border: #000 2px solid;
+  padding: 8px 24px;
+  border-radius: 30px;
+}
+.header-contact:hover {
+  border: #5292b2 2px solid;
+  text-decoration: none !important;
+}
+@media screen and (max-width: 960px) {
+  .header-contact {
+    border: none;
+    padding: 0;
+  }
+  .header-contact:hover {
+    border: none !important;
+    text-decoration: underline !important;
+  }
+}
 @media screen and (max-width: 960px) {
   .header__title {
     width: 120px;
-  }
-  .hamburger {
-    display: block;
-    position: absolute;
-    right: 2%;
-    top: -1%;
   }
 }
 
@@ -202,14 +206,17 @@ a {
 .kv {
   background-color: #f5f7f8;
 }
-@media screen and (max-width: 768px) {
-  .kv{
-    padding-top: 76px;
-  }
-}
 .kv-img img {
   height: 80%;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .kv {
+    padding-top: 76px;
+  }
+  .kv-img img {
+    height: 380px;
+  }
 }
 /* 下から */
 
@@ -299,6 +306,7 @@ a {
     margin-top: 12px;
     margin-bottom: 40px;
     text-align: center;
+    
   }
   .br {
     display: block;
@@ -313,11 +321,11 @@ a {
   color: #646464;
   text-decoration: none;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .concept-contents-blog:hover {
   color: #5292b2;
-  text-decoration: underline;
 }
 
 /* 下層ページ */
@@ -336,6 +344,13 @@ a {
   text-align: center;
   margin-top: 8px;
   margin-bottom: 8px;
+}
+
+.work-text-a{
+  text-decoration: underline;
+}
+.work-text-a:hover {
+  color: #5292b2;
 }
 
 /* footer */
@@ -404,7 +419,16 @@ a {
 
 /*========= スクロールダウンのためのCSS ===============*/
 
-/* hamburger menu */
+/* ハンバーガーメニュー */
+
+.hamburger {
+  width: 48px;
+  height: 100%;
+  display: none;
+  background-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+  border-color: transparent; /*buttonタグデフォルトスタイルを打ち消し*/
+  z-index: 9999;
+}
 /* ハンバーガーメニューの線 */
 .hamburger span {
   width: 80%;
@@ -444,12 +468,25 @@ a {
   top: -13px;
   transform: rotate(-45deg);
 }
+@media screen and (max-width: 960px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: -1%;
+  }
+}
 /*スクロールダウン全体の場所*/
 .scrolldown2 {
   /*描画位置※位置は適宜調整してください*/
   position: absolute;
-  bottom: 20px;
-  right: 5%;
+  bottom: 10%;
+  right: 7%;
+}
+@media screen and (max-width: 768px) {
+  .scrolldown2 {
+    bottom: 0;
+  }
 }
 
 /*Scrollテキストの描写*/
@@ -473,7 +510,7 @@ a {
   content: "";
   /*描画位置*/
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: -4px;
   /*丸の形状*/
   width: 10px;
