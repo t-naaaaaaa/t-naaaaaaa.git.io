@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@media screen and (max-width: 768px) {
+  html {
+    width: 130%;
+  }
+}
 
 body {
   background-color: #fff;
@@ -594,4 +599,84 @@ a {
 }
 .contact-sns-icon:hover {
   text-decoration: underline;
+}
+
+/* コンタクトフォーム */
+
+/* Existing styles remain the same */
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 5px;
+  width: auto;
+  appearance: auto !important;
+}
+
+.radio-group {
+  margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group label {
+  display: inline;
+  font-weight: normal;
+}
+
+.required {
+  color: red;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.jcc {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.mt60 {
+  margin-top: 90px;
 }
